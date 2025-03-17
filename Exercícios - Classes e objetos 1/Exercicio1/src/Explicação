@@ -1,0 +1,2 @@
+Após ter modificado o modificador de acesso para private, não é possível alterar os atributos diretamente de um objeto estando em outra classe.
+É apenas possível alterar dentro da classe ou, utilizando um método construtor para setar os novos atributos.
