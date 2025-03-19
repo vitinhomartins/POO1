@@ -1,0 +1,11 @@
+Exercício 3:
+
+No exercício proposto em sala, um exemplo de objeto é: javaobj. 
+Método: main e getNome.
+Classe: JavaApp e Java.
+
+Objeto é uma alocação na memória criada a partir de um modelo denominado classe. Ele possui referência na memória, bem como seus atributos e métodos. 
+
+Método: é uma função/módulo que possui alguma função dentro de uma classe. Por exemplo, posso ter dentro da classe Pessoa, um método de getNome para retornar o nome do objeto pessoa criado. 
+
+Classe: é um modelo para criar objetos em cima. Portanto, criar uma classe é montar um esqueleto para os objetos seguiem um certo padrão. 
