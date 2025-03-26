@@ -1,0 +1,1 @@
+Em java, as trocas ocorrem por meio de cópias da referência somente. Portanto, para executar uma troca eficiente, é necessário usar métodos de troca dentro dos objetos para que ocorra a efetiva troca.

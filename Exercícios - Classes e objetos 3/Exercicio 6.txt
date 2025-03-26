@@ -1,0 +1,1 @@
+A variável na qual é compartilhada entre todos os objetos deve ser declarada como Static, e, os métodos que a forem retornar, também devem ser statics.

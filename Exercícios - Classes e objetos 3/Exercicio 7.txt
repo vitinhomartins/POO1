@@ -1,0 +1,1 @@
+O modificador que deve ser usado é o private. Ele priva outras classes de acessar nossos atributos e apenas a classe consegue usar. 

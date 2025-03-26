@@ -1,0 +1,5 @@
+Exercício 3:
+
+a. A classe descrita anteriormente está incorreta, pois, na Classe X o atributo cont está privado, portanto, é impossível acessá-lo diretamente sem que seja utilizado o método "setCont".
+
+
