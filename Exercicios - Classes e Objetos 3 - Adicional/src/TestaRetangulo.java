@@ -16,5 +16,12 @@ public class TestaRetangulo {
         ret2.exibaArea();
         ret2.isQuadrado();
 
+        System.out.println("Modificando retangulo 2: ");
+
+        ret2.modificaRetangulo(8, 8);
+        ret2.isQuadrado();
+
+        Retangulo.quantidade();
+
     }
 }
