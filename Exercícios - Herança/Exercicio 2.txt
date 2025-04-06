@@ -1,0 +1,6 @@
+O resultado impresso será: 
+Computador()
+Notebook()
+Codigo 12345
+Pois, Notebook é filho de Computador, portanto, o construtor de Computador será executado primeiro, para depois o construtor de Notebook executar. 
+

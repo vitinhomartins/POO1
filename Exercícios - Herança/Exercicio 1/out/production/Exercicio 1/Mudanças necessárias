@@ -1,0 +1,4 @@
+Para o código funcionar corretamente, primeiro tive que mudar para protected altura e largura.
+
+Após, tive que criar o método setEstilo, pois, não estava criado no Triangulo.java e não existia na classe mãe.
+

@@ -1,0 +1,7 @@
+Os resultados impressos foram: x: 8 e x: 12.
+Os resultados são ocasionados pois, primeiro foi setado o valor 8 para o objeto do tipo Protegido
+e depois, criou-se outro objeto do tipo ProtegidoSub (filho de Protegido) e setou-se o valor 12.
+
+O atributo i foi setado como private pois, ele não deve ser alterado diretamente por nenhuma classe,
+embora ele possa ser utilizado para a criação usando super. Já os métodos do pai foram setados como private
+pois a classe filha precisa de acesso.
