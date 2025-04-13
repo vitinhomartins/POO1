@@ -1,0 +1,6 @@
+b) Os objetos da classe A podem acessar apenas os métodos m1(), m2() e m3(), pois, pertencem a sua classe. 
+
+c) Os objetos da classe B podem acessar todos os 5 métodos, pois, os três primeiros são herdados da superclasse A, e os dois restantes são respectivos de suas classes. 
+
+d) Os métodos que podem ser acessados pela classe B são todos exceto o m1(), pois, agora somente pode ser acessado mediante sua classe. 
+

@@ -1,0 +1,1 @@
+O construtor da subclasse chama o construtor da superclasse por meio da palavra-chave "super".

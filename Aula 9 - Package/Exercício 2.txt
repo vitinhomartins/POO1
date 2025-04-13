@@ -1,0 +1,1 @@
+Sim, os parâmetros podem ser passados pela palavra-chave super. É uma forma de atribuir diretamente valores aos atributos da superclasse. 
