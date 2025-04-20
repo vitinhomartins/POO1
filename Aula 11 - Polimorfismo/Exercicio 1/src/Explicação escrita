@@ -1,0 +1,32 @@
+A aplicação desenvolve três classes, sendo duas delas filhas de Veiculo (Automóvel e Bicicleta).
+A classe Oficina utiliza um gerador de pseudo números para gerar números de 0 a 100, e, caso seja par,
+é instânciado um automóvel e, caso seja impar, é instânciado uma bicicleta.
+A classe UsaOficina utiliza um for de 4 loops para gerar 4 objetos diferentes usando os métodos de geração aleatórios implementados.
+Portanto, são gerados quatro objetos e o programa imprime quais são os seus tipos.
+
+Saída no meu caso de teste:
+
+Veículo número: 0
+É um veículo
+É um automóvel
+Verificar automóvel
+Ajustar automóvel
+Limpar automóvel
+Veículo número: 1
+É um veículo
+É um automóvel
+Verificar automóvel
+Ajustar automóvel
+Limpar automóvel
+Veículo número: 2
+É um veículo
+É uma bicicleta
+Verificar bicicleta
+Ajustar bicicleta
+Limpar bicicleta
+Veículo número: 3
+É um veículo
+É uma bicicleta
+Verificar bicicleta
+Ajustar bicicleta
+Limpar bicicleta
