@@ -1,0 +1,1 @@
+Ela vai sendo levada até o try-catch mais exterior do código. 

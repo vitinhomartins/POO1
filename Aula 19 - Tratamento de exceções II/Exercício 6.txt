@@ -1,0 +1,1 @@
+Serão executadas as linhas 4 e 5 para o método a(); e 10 e 11 para o método b();

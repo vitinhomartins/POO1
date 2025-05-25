@@ -1,0 +1,1 @@
+Throw lança objetos que são herdados da classe Throwable (exceções gerais do código).

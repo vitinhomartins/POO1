@@ -1,0 +1,1 @@
+Não, pois o segundo catch nunca será alcançado, visto que o primeiro catch já garante que todas as exceções serão capturadas nele. 

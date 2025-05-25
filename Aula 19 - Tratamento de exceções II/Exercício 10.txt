@@ -1,0 +1,1 @@
+Não, pois, do tipo error são erros fatais e o código deve ser parado imediatamente (erros de compilação, por exemplo).

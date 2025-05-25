@@ -1,0 +1,1 @@
+Correto em partes. Pois, ele será a última instrução do bloco de try-catch que será executada, independente de ocorrer exceções ou não. Portanto, não é a última coisa a rodar no código, mas sim no bloco try-catch.

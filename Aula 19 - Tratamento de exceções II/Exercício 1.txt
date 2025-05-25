@@ -1,0 +1,1 @@
+Sim, caso seja usado a superclasse exception, todas as outras exceções das subclasses serão capturadas. 
