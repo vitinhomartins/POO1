@@ -1,0 +1,1 @@
+Não há a instrução try antes do catch. O for deveria estar alocado dentro do try-catch.

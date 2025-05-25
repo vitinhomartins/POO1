@@ -1,0 +1,1 @@
+Quando uma excessão não é capturada, a execução é interrompida e a JVM expõe a stack trace para averiguar onde ocorreu o erro. 

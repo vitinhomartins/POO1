@@ -1,0 +1,1 @@
+A classe que fica acima de todas é a Throwable.

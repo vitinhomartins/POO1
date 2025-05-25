@@ -1,0 +1,3 @@
+Try é onde o código alocado pode gerar uma exceção.
+Catch é a parte do código que vai capturar as exceções lançadas. 
+E finally é a parte do código que será executada mesmo que não gere uma exceção. 

@@ -1,0 +1,1 @@
+O programa deve estar preparado para capturá-la por meio do try-catch. E, caso não ocorra, deve ser lançado para que outra parte do código a capture. 

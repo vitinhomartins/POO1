@@ -1,0 +1,1 @@
+Elas devem estar dentro da estrutura Try-Catch para serem capturadas pela JVM.
