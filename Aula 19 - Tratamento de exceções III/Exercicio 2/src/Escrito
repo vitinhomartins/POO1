@@ -1,0 +1,5 @@
+A saída do programa será uma exceção. E será exibido o local exato onde a exceção ocorreu, nesse caso:
+Classe - GeraExcecao
+Linha - 6
+Método que gerou - geraException
+
