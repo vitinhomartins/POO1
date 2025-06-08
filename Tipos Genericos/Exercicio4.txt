@@ -1,0 +1,4 @@
+Para restringir o segundo parametro, basta:
+public class ClasseA<T, U extends Number> {
+
+}

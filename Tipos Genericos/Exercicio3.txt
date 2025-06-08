@@ -1,0 +1,2 @@
+Para criar uma classe que use dois tipos genericos, basta declarar assim:
+Classe A<T, U> - T e U serao do tipo generico.

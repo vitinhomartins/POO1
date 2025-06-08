@@ -1,0 +1,2 @@
+public class ClasseA<T, U extends T>{
+}

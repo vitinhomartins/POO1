@@ -1,0 +1,2 @@
+Pode ser simplificada usando:
+MinhaClasse<Double, String> obj = new MinhaClasse<>(1.1, "Ola");

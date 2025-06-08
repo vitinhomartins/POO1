@@ -1,0 +1,11 @@
+public class ClassB<T> implements IGenIF<T>{
+	private T numb;
+	public ClassB(T valor){
+		this.valor = valor;
+	}
+
+	@Override
+	public T getValor(){
+		return valor;
+	}
+}

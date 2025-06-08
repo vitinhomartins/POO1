@@ -1,0 +1,1 @@
+Nao. Em java, apenas tipos genericos podem ser usados como parametro de tipo, pois, o Java trabalha transformando tipos genericos em objetos, e primitivos nao possuem essa mecanica.
