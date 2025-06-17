@@ -1,12 +1,10 @@
 package witches.of.legends.Run;
 
-import witches.of.legends.Maps.Map;
+
 import witches.of.legends.Maps.StartMap;
 import witches.of.legends.Maps.Subterraneo;
 import witches.of.legends.PlayerStuff.*;
-import witches.of.legends.Utilities.ChamberAlreadyCompletedException;
-import witches.of.legends.Utilities.ItemIndexInvalidoException;
-import witches.of.legends.Utilities.Utilities;
+import witches.of.legends.Utilities.*;
 
 import java.util.HashMap;
 import java.util.InputMismatchException;
@@ -14,6 +12,7 @@ import java.util.Scanner;
 
 public class LegendsOfWitches {
     public static Jogador playerGlobal;
+    public static BattleLogger logger;
     public static void main(String[] args) {
         // variáveis importates
         int chambersConcluidas = 0;
@@ -39,6 +38,7 @@ public class LegendsOfWitches {
         Outfits roupaPlayer = new Outfits("Roupa inicial", 15, 8);
         Equipamento equipamentoPlayer = new Equipamento(roupaPlayer, armaPlayer, escudoPlayer);
         playerGlobal = new Jogador(nome, 120, 20, 25, Elementos.LIGHT, equipamentoPlayer);
+        logger = new ArquivosLog(playerGlobal.getNome() + ".txt");
         System.out.println("Seja bem-vindo ao Legends of Witches.\nSua missão é entrar nas minas antigas e\naveriguar o motivo do grande miasma de terror sendo emitido!");
         while (chambersConcluidas < 2) {
             try {
@@ -48,7 +48,7 @@ public class LegendsOfWitches {
 
                 boolean venceu = LegendsOfWitches.fighting(playerGlobal, StartMap.boss);
 
-                if (StartMap.boss.getHealth() <= 0) {
+                if (StartMap.boss.getHealth() <= 0 && venceu) {
                     mapaInicial.chambers[escolha] = true;
                     playerGlobal.setHealth(120);
                     chambersConcluidas++;
@@ -72,8 +72,17 @@ public class LegendsOfWitches {
         }
         mapaInicial.enfrentarBossFinal();
     }
-
-    public static void mapa2() {
+    /**
+     * Segundo mapa = Subterrâneo.
+     * Cada câmara possui um boss e o jogador deve vencê-los para avançar.
+     * Caso seja derrotado, sua vida é restaurada e ele pode trocar seus equipamentos.
+     * O progresso é salvo e, ao vencer as duas câmaras, o jogador enfrentará o boss final.
+     *
+     * @author Victor Hugo e Manuela
+     * @exception InputMismatchException se a entrada fornecida não for um número inteiro.
+     * @exception IllegalArgumentException se o valor escolhido para a câmara for inválido.
+     */
+    public static void mapa2()  {
         int chambersConcluidas = 0;
         Subterraneo subterraneo = new Subterraneo(1);
         Scanner scanner = new Scanner(System.in);
@@ -85,7 +94,7 @@ public class LegendsOfWitches {
 
                 boolean venceu = LegendsOfWitches.fighting(playerGlobal, Subterraneo.boss);
 
-                if (Subterraneo.boss.getHealth() <= 0) {
+                if (Subterraneo.boss.getHealth() <= 0 && venceu) {
                     subterraneo.chambers[escolha] = true;
                     playerGlobal.setHealth(120);
                     chambersConcluidas++;
@@ -110,13 +119,25 @@ public class LegendsOfWitches {
         subterraneo.enfrentarBossFinal();
     }
 
+    /**
+     * Inicia uma batalha entre um jogador e um boss, turnos alternados de ataque.
+     * Exibe mensagens ao jogador e registra todas as ações em um arquivo de log.
+     * O jogador pode escolher ataques e receber recompensas específicas.
+     *
+     * @author Victor Hugo e Manuela
+     * @param player o {@code Jogador} que enfrentará o boss, contendo status e equipamentos.
+     * @param boss o {@code Boss} inimigo que lutará contra o jogador, também com status e equipamentos.
+     * @return true se o jogador vencer o boss, false se for derrotado.
+     */
+
     public static boolean fighting(Jogador player, Boss boss) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("\nBatalha iniciada contra " + boss.getNome() + "!");
+        logger.log("\nBatalha iniciada contra " + boss.getNome() + "!");
         System.out.println("Vida do boss: " + boss.getHealth() + " Attack do boss: " + boss.getAttack() + " defesa do boss: " + boss.getDefense());
-
+        logger.log("Vida do boss: " + boss.getHealth() + " Attack do boss: " + boss.getAttack() + " defesa do boss: " + boss.getDefense());
         while (player.getHealth() > 0 && boss.getHealth() > 0) {
-            Armas armaAtual = player.getEquipamento().getArmas().getFirst();
+            Armas armaAtual = player.getArmaAtual();
             armaAtual.exibirAtaques();
 
             int escolhaAtaque;
@@ -131,46 +152,53 @@ public class LegendsOfWitches {
                     break;
                 } catch (InputMismatchException e) {
                     System.out.println("Entrada inválida. Digite um número.");
-                    scanner.nextLine(); // limpa o buffer
+                    scanner.nextLine();
                 }
             }
 
             // Exibir descrição do ataque escolhido
             System.out.println(armaAtual.usarAtaque(escolhaAtaque, boss.getNome()));
-
+            logger.log(armaAtual.usarAtaque(escolhaAtaque, boss.getNome()));
             // --- Jogador ataca ---
             double danoPlayer = Utilities.calcularDano(player, boss);
             boss.receberDano(danoPlayer);
             System.out.println(player.getNome() + " ataca " + boss.getNome() + " causando " + danoPlayer + " de dano!");
             System.out.println(boss.getNome() + " agora tem " + boss.getHealth() + " de vida.");
-
+            logger.log(player.getNome() + " ataca " + boss.getNome() + " causando " + danoPlayer + " de dano!");
+            logger.log(boss.getNome() + " agora tem " + boss.getHealth() + " de vida.");
             if (boss.getHealth() <= 0) {
                 if (StartMap.boss.getNome().equals("Ignarok")&&StartMap.acontecendo) {
                     System.out.println("Ignarok caiu em combate! Você obtém sua lança lendária!");
+                    logger.log("Ignarok caiu em combate! Você obtém sua lança lendária!");
                     Armas armaBoss = boss.getEquipamento().getArmas().getFirst();
                     playerGlobal.getEquipamento().setArma(armaBoss);
                 }
                 else if (StartMap.boss.getNome().equals("Sylphira")&&StartMap.acontecendo) {
                     System.out.println("Sylphira dissipou-se no vento... Você obtém seu escudo etéreo!");
+                    logger.log("Sylphira dissipou-se no vento... Você obtém seu escudo etéreo!");
                     Escudo escudoBoss = boss.getEquipamento().getEscudos().getFirst();
                     playerGlobal.getEquipamento().setEscudo(escudoBoss);
                 }
                 else if(StartMap.boss.getNome().equals("Camellia") && StartMap.acontecendo) {
                     System.out.println("Parabéns! Você derrotou Camellia.");
+                    logger.log("Parabéns! Você derrotou Camellia.");
                     Armas armaBoss = boss.getEquipamento().getArmas().getFirst();
                     playerGlobal.getEquipamento().setArma(armaBoss);
                 }
                 else if(Subterraneo.boss.getNome().equals("Vyreel") ) {
                     System.out.println("Parabéns! Você derrotou Vyreel.");
+                    logger.log("Parabéns! Você derrotou Vyreel.");
                     Outfits outfitBoss = boss.getEquipamento().getRoupas().getFirst();
                     playerGlobal.getEquipamento().setRoupas(outfitBoss);
                 }
                 else if(Subterraneo.boss.getNome().equals("Zephrya")){
                     System.out.println("Parabéns! Você derrotou Zephrya.");
+                    logger.log("Parabéns! Você derrotou Zephrya.");
                     Armas armaBoss = boss.getEquipamento().getArmas().getFirst();
                     playerGlobal.getEquipamento().setArma(armaBoss);
                 }else if(Subterraneo.boss.getNome().equals("Isabella")) {
                     System.out.println("Parabéns! Você derrotou Isabella, sua mãe.");
+                    logger.log("Parabéns! Você derrotou Isabella, sua mãe.");
                     Armas armaBoss = boss.getEquipamento().getArmas().getFirst();
                     playerGlobal.getEquipamento().setArma(armaBoss);
                 }
@@ -184,72 +212,17 @@ public class LegendsOfWitches {
             player.receberDano(danoBoss);
             System.out.println(boss.getNome() + " ataca " + player.getNome() + " causando " + danoBoss + " de dano!");
             System.out.println(player.getNome() + " agora tem " + player.getHealth() + " de vida.");
-
+            logger.log(boss.getNome() + " ataca " + player.getNome() + " causando " + danoBoss + " de dano!");
+            logger.log(player.getNome() + " agora tem " + player.getHealth() + " de vida.");
             if (player.getHealth() <= 0) {
                 System.out.println(player.getNome() + " foi derrotado por " + boss.getNome() + "...");
-
+                logger.log(player.getNome() + " foi derrotado por " + boss.getNome() + "...");
             }
 
             System.out.println("\n--- Próxima rodada ---");
             Utilities.pausar(2);
         }
         return false;
-    }
-
-    public static void trocarEquipamentos(Jogador player) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("\n--- TROCA DE EQUIPAMENTOS ---");
-
-        try {
-            // Trocar arma
-            System.out.println("\nArmas disponíveis:");
-            for (int i = 0; i < player.getEquipamento().getArmas().size(); i++) {
-                Armas arma = player.getEquipamento().getArmas().get(i);
-                System.out.println("[" + i + "] " + arma.getNome() + " | Dano: " + arma.getAttack());
-            }
-            System.out.print("Escolha a arma a ser equipada (número): ");
-            int escolhaArma = scanner.nextInt();
-            if (escolhaArma < 0 || escolhaArma >= player.getEquipamento().getArmas().size()) {
-                throw new ItemIndexInvalidoException("Índice de arma inválido.");
-            }
-            player.getEquipamento().setArma(player.getEquipamento().getArmas().get(escolhaArma));
-            System.out.println("Arma equipada com sucesso!");
-
-            // Trocar escudo
-            System.out.println("\nEscudos disponíveis:");
-            for (int i = 0; i < player.getEquipamento().getEscudos().size(); i++) {
-                Escudo escudo = player.getEquipamento().getEscudos().get(i);
-                System.out.println("[" + i + "] " + escudo.getNome() + " | Defesa: " + escudo.getDefense());
-            }
-            System.out.print("Escolha o escudo a ser equipado (número): ");
-            int escolhaEscudo = scanner.nextInt();
-            if (escolhaEscudo < 0 || escolhaEscudo >= player.getEquipamento().getEscudos().size()) {
-                throw new ItemIndexInvalidoException("Índice de escudo inválido.");
-            }
-            player.getEquipamento().setEscudo(player.getEquipamento().getEscudos().get(escolhaEscudo));
-            System.out.println("Escudo equipado com sucesso!");
-
-            // Trocar armadura
-            System.out.println("\nRoupas/Armaduras disponíveis:");
-            for (int i = 0; i < player.getEquipamento().getRoupas().size(); i++) {
-                Outfits roupa = player.getEquipamento().getRoupas().get(i);
-                System.out.println("[" + i + "] " + roupa.getNome() + " | Defesa: " + roupa.getDefense());
-            }
-            System.out.print("Escolha a roupa a ser equipada (número): ");
-            int escolhaRoupa = scanner.nextInt();
-            if (escolhaRoupa < 0 || escolhaRoupa >= player.getEquipamento().getRoupas().size()) {
-                throw new ItemIndexInvalidoException("Índice de roupa inválido.");
-            }
-            player.getEquipamento().setRoupas(player.getEquipamento().getRoupas().get(escolhaRoupa));
-            System.out.println("Roupa equipada com sucesso!");
-
-            System.out.println("\n--- Equipamentos atualizados com sucesso! ---");
-        } catch (ItemIndexInvalidoException e) {
-            System.out.println("Erro ao trocar equipamento: " + e.getMessage());
-        } catch (InputMismatchException e) {
-            System.out.println("Entrada inválida. Por favor, digite um número.");
-            scanner.nextLine(); // Limpar o buffer
-        }
     }
 
 }

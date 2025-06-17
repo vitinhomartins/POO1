@@ -76,6 +76,9 @@ public abstract class Personagem {
     public void setRoupaAtual(Outfits roupaAtual) {
         this.roupaAtual = roupaAtual;
     }
+    public Armas getArmaAtual() {
+        return armaAtual;
+    }
 
     public Equipamento getEquipamento() {
         return equipamento;

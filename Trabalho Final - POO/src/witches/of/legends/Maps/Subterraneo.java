@@ -13,6 +13,11 @@ public class Subterraneo extends Map{
     public Subterraneo(int number) {
         super(number);
     }
+    /**
+     * Retorna o nome deste mapa.
+     *
+     * @return o nome "Subterraneo Eterno".
+     */
     @Override
     String getNome() {
         return "Subterraneo Eterno";
@@ -99,10 +104,6 @@ public class Subterraneo extends Map{
         Utilities.limparChat(2);
         System.out.println(LegendsOfWitches.playerGlobal.getNome() + " - Eu me corrompi! Agora entendo tudo o que houve.\nMinha mãe não tinha culpa de nada, eu sou o Deus do caos!");
         Utilities.limparChat(2);
-    }
-
-    @Override
-    void resetarMapa() {
-
+        LegendsOfWitches.logger.encerrarArquivo();
     }
 }

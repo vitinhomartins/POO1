@@ -1,0 +1,104 @@
+--- INÍCIO DO ARQUIVO ---
+[Horário: 20:48:25] 
+Batalha iniciada contra Ignarok!
+[Horário: 20:48:25] Vida do boss: 60.0 Attack do boss: 75 defesa do boss: 40
+[Horário: 20:48:26] Corte Rápido - O jogador cortou o ar rapidamente e atingiu o Ignarok!
+[Horário: 20:48:26] Vitinho ataca Ignarok causando 20.0 de dano!
+[Horário: 20:48:26] Ignarok agora tem 40.0 de vida.
+[Horário: 20:48:27] Ignarok ataca Vitinho causando 32.0 de dano!
+[Horário: 20:48:27] Vitinho agora tem 88.0 de vida.
+[Horário: 20:48:29] Estocada Precisa - Uma estocada certeira foi desferida contra o Ignarok!
+[Horário: 20:48:29] Vitinho ataca Ignarok causando 20.0 de dano!
+[Horário: 20:48:29] Ignarok agora tem 20.0 de vida.
+[Horário: 20:48:30] Ignarok ataca Vitinho causando 32.0 de dano!
+[Horário: 20:48:30] Vitinho agora tem 56.0 de vida.
+[Horário: 20:48:32] Golpe Giratório - O jogador girou com força, atingindo o Ignarok em cheio!
+[Horário: 20:48:32] Vitinho ataca Ignarok causando 20.0 de dano!
+[Horário: 20:48:32] Ignarok agora tem 0.0 de vida.
+[Horário: 20:48:32] Ignarok caiu em combate! Você obtém sua lança lendária!
+[Horário: 20:48:37] 
+Batalha iniciada contra Sylphira!
+[Horário: 20:48:37] Vida do boss: 45.0 Attack do boss: 67 defesa do boss: 45
+[Horário: 20:48:38] Estocada Flamejante - A lança incendeia e perfura violentamente o Sylphira!
+[Horário: 20:48:38] Vitinho ataca Sylphira causando 22.0 de dano!
+[Horário: 20:48:38] Sylphira agora tem 23.0 de vida.
+[Horário: 20:48:39] Sylphira ataca Vitinho causando 24.0 de dano!
+[Horário: 20:48:39] Vitinho agora tem 96.0 de vida.
+[Horário: 20:48:41] Chicote de Brasas - Um giro rápido cria um rastro de brasas que atingem o Sylphira!
+[Horário: 20:48:41] Vitinho ataca Sylphira causando 22.0 de dano!
+[Horário: 20:48:41] Sylphira agora tem 1.0 de vida.
+[Horário: 20:48:42] Sylphira ataca Vitinho causando 24.0 de dano!
+[Horário: 20:48:42] Vitinho agora tem 72.0 de vida.
+[Horário: 20:48:44] Explosão de Fogo - A lança libera uma onda explosiva de calor contra o Sylphira!
+[Horário: 20:48:44] Vitinho ataca Sylphira causando 22.0 de dano!
+[Horário: 20:48:44] Sylphira agora tem 0.0 de vida.
+[Horário: 20:48:44] Sylphira dissipou-se no vento... Você obtém seu escudo etéreo!
+[Horário: 20:48:48] 
+Batalha iniciada contra Camellia!
+[Horário: 20:48:48] Vida do boss: 50.0 Attack do boss: 85 defesa do boss: 56
+[Horário: 20:48:51] Estocada Flamejante - A lança incendeia e perfura violentamente o Camellia!
+[Horário: 20:48:51] Vitinho ataca Camellia causando 13.5 de dano!
+[Horário: 20:48:51] Camellia agora tem 36.5 de vida.
+[Horário: 20:48:52] Camellia ataca Vitinho causando 20.0 de dano!
+[Horário: 20:48:52] Vitinho agora tem 100.0 de vida.
+[Horário: 20:48:54] Chicote de Brasas - Um giro rápido cria um rastro de brasas que atingem o Camellia!
+[Horário: 20:48:54] Vitinho ataca Camellia causando 13.5 de dano!
+[Horário: 20:48:54] Camellia agora tem 23.0 de vida.
+[Horário: 20:48:55] Camellia ataca Vitinho causando 20.0 de dano!
+[Horário: 20:48:55] Vitinho agora tem 80.0 de vida.
+[Horário: 20:48:57] Explosão de Fogo - A lança libera uma onda explosiva de calor contra o Camellia!
+[Horário: 20:48:57] Vitinho ataca Camellia causando 13.5 de dano!
+[Horário: 20:48:57] Camellia agora tem 9.5 de vida.
+[Horário: 20:48:58] Camellia ataca Vitinho causando 20.0 de dano!
+[Horário: 20:48:58] Vitinho agora tem 60.0 de vida.
+[Horário: 20:49:01] Estocada Flamejante - A lança incendeia e perfura violentamente o Camellia!
+[Horário: 20:49:01] Vitinho ataca Camellia causando 13.5 de dano!
+[Horário: 20:49:01] Camellia agora tem 0.0 de vida.
+[Horário: 20:49:01] Sylphira dissipou-se no vento... Você obtém seu escudo etéreo!
+[Horário: 20:49:03] 
+Batalha iniciada contra Zephrya!
+[Horário: 20:49:03] Vida do boss: 200.0 Attack do boss: 117 defesa do boss: 56
+[Horário: 20:49:04] Estocada Flamejante - A lança incendeia e perfura violentamente o Zephrya!
+[Horário: 20:49:04] Vitinho ataca Zephrya causando 109.0 de dano!
+[Horário: 20:49:04] Zephrya agora tem 91.0 de vida.
+[Horário: 20:49:05] Zephrya ataca Vitinho causando 12.0 de dano!
+[Horário: 20:49:05] Vitinho agora tem 148.0 de vida.
+[Horário: 20:49:07] Estocada Flamejante - A lança incendeia e perfura violentamente o Zephrya!
+[Horário: 20:49:07] Vitinho ataca Zephrya causando 109.0 de dano!
+[Horário: 20:49:07] Zephrya agora tem 0.0 de vida.
+[Horário: 20:49:07] Parabéns! Você derrotou Zephrya.
+[Horário: 20:49:14] 
+Batalha iniciada contra Vyreel!
+[Horário: 20:49:14] Vida do boss: 210.0 Attack do boss: 106 defesa do boss: 50
+[Horário: 20:49:15] Tornado Ascendente - Zephrya levanta um ciclone que lança o Vyreel ao ar!
+[Horário: 20:49:15] Vitinho ataca Vyreel causando 208.0 de dano!
+[Horário: 20:49:15] Vyreel agora tem 2.0 de vida.
+[Horário: 20:49:16] Vyreel ataca Vitinho causando 0.0 de dano!
+[Horário: 20:49:16] Vitinho agora tem 120.0 de vida.
+[Horário: 20:49:18] Rajada Sônica - Um disparo de vento tão rápido que estilhaça a armadura!
+[Horário: 20:49:18] Vitinho ataca Vyreel causando 208.0 de dano!
+[Horário: 20:49:18] Vyreel agora tem 0.0 de vida.
+[Horário: 20:49:18] Parabéns! Você derrotou Vyreel.
+[Horário: 20:49:26] 
+Batalha iniciada contra Isabella!
+[Horário: 20:49:26] Vida do boss: 400.0 Attack do boss: 115 defesa do boss: 80
+[Horário: 20:49:28] Lâmina do Vendaval - Um corte rápido impulsionado por ventos cortantes!
+[Horário: 20:49:28] Vitinho ataca Isabella causando 128.75 de dano!
+[Horário: 20:49:28] Isabella agora tem 271.25 de vida.
+[Horário: 20:49:29] Isabella ataca Vitinho causando 2.0 de dano!
+[Horário: 20:49:29] Vitinho agora tem 118.0 de vida.
+[Horário: 20:49:31] Lâmina do Vendaval - Um corte rápido impulsionado por ventos cortantes!
+[Horário: 20:49:31] Vitinho ataca Isabella causando 128.75 de dano!
+[Horário: 20:49:31] Isabella agora tem 142.5 de vida.
+[Horário: 20:49:32] Isabella ataca Vitinho causando 2.0 de dano!
+[Horário: 20:49:32] Vitinho agora tem 116.0 de vida.
+[Horário: 20:49:34] Lâmina do Vendaval - Um corte rápido impulsionado por ventos cortantes!
+[Horário: 20:49:34] Vitinho ataca Isabella causando 128.75 de dano!
+[Horário: 20:49:34] Isabella agora tem 13.75 de vida.
+[Horário: 20:49:35] Isabella ataca Vitinho causando 2.0 de dano!
+[Horário: 20:49:35] Vitinho agora tem 114.0 de vida.
+[Horário: 20:49:39] Rajada Sônica - Um disparo de vento tão rápido que estilhaça a armadura!
+[Horário: 20:49:39] Vitinho ataca Isabella causando 128.75 de dano!
+[Horário: 20:49:39] Isabella agora tem 0.0 de vida.
+[Horário: 20:49:39] Parabéns! Você derrotou Vyreel.
+--- FIM DO ARQUIVO ---

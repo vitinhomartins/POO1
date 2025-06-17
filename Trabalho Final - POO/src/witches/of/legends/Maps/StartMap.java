@@ -8,6 +8,13 @@ import witches.of.legends.Utilities.Utilities;
 
 import java.util.HashMap;
 
+/**
+ * Classe que representa o primeiro mapa do jogo: Ilha do Sangue Eterno.
+ * Define as câmaras, bosses e lógica de entrada em cada local e combate.
+ *
+ * @author Victor Hugo e Manuela
+ */
+
 public class StartMap extends Map{
     public static Boss boss;
     public static boolean acontecendo = true;
@@ -32,9 +39,17 @@ public class StartMap extends Map{
         System.out.println("Não se sabe o que ao certo será encontrado atrás de cada uma delas.");
     }
 
+    /**
+     * Permite que o jogador entre em uma câmara específica, ativando o boss correspondente.
+     *
+     * @param numero o número da câmara que deseja entrar (1 a 2).
+     * @throws ChamberAlreadyCompletedException caso a câmara já tenha sido vencida anteriormente.
+     * @throws IllegalArgumentException se o número da câmara for inválido (fora do intervalo 1 a 2).
+     */
+
     @Override
     public void entrarChamber(int numero) throws ChamberAlreadyCompletedException {
-        if (numero < 1 || numero > 5) {
+        if (numero < 1 || numero > 2) {
             throw new IllegalArgumentException("Número de câmara inválido! Deve ser entre 1 e 5.");
         }
         if (chambers[numero]) {
@@ -71,13 +86,15 @@ public class StartMap extends Map{
                 break;
         }
     }
-
+    /**
+     * Executa o combate contra a boss final Camellia, com mecânicas de tentativa repetida até vitória.
+     */
     @Override
     public void enfrentarBossFinal() {
         Utilities.limparChat(2);
         System.out.println("Uma risada ecoa pelas câmaras vazias...");
         System.out.println("Uma figura encapuzada surge em meio às chamas: é Camellia, a Bruxa do Fogo Eterno!");
-        System.out.println("Camellia: \"Você ousa desafiar as chamas eternas? Queime junto com sua arrogância!\"");
+        System.out.println("Camellia: Você ousa desafiar as chamas eternas? Queime junto com sua arrogância!");
 
         HashMap<Integer, String> ataquesCajado = new HashMap<>();
         ataquesCajado.put(1, "Explosão de Cinzas - Uma nuvem de brasas explode contra o inimigo!");
@@ -90,7 +107,7 @@ public class StartMap extends Map{
 
         Boss camellia = new Boss("Camellia", 50, 25, 16, Elementos.FIRE, equipamentoCamellia);
 
-        // Assumindo que você esteja chamando do main e tenha o player lá
+
         boolean ganhou = LegendsOfWitches.fighting(LegendsOfWitches.playerGlobal, camellia);
         while(!ganhou){
             if(LegendsOfWitches.playerGlobal.getHealth()<0) {
@@ -112,9 +129,5 @@ public class StartMap extends Map{
         System.out.println("Você recebeu level-up. Seus novos status: attack - " + LegendsOfWitches.playerGlobal.getAttack() + " defesa: " + LegendsOfWitches.playerGlobal.getDefense());
         acontecendo = false;
         LegendsOfWitches.mapa2();
-    }
-    @Override
-    public void resetarMapa() {
-
     }
 }

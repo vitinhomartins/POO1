@@ -20,5 +20,4 @@ public abstract class Map {
     public static boolean podeAvancar(){
         return concluido;
     }
-    abstract void resetarMapa();
 }
